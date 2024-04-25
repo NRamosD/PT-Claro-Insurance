@@ -24,7 +24,7 @@ class scheduleController extends Controller
         $schedule = Schedule::find($id);
         if (!$schedule) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"horario no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
@@ -40,11 +40,12 @@ class scheduleController extends Controller
 
     public function createSchedule(Request $request){
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'lastname' => 'required',
-            'age' => 'required|integer|min:18',
-            'ci' => 'required',
-            'email' => 'required|email|unique:student,email',
+
+            "name"=> "",
+            "start_time"=> 'required',
+            "end_time"=> 'required',
+            "id_course"=> 'required',
+            "id_day"=> 'required',
         ]);
 
         if($validator->fails()){
@@ -58,16 +59,18 @@ class scheduleController extends Controller
         };
 
         $schedule = Schedule::create([
-            'name' =>$request->name,
-            'lastname' =>$request->lastname,
-            'age' =>$request->age,
-            'ci' =>$request->ci,
-            'email' =>$request->email,
+
+            "name" =>$request->name,
+            "start_time" =>$request->start_time,
+            "end_time" =>$request->end_time,
+            "id_course" =>$request->id_course,
+            "id_day" =>$request->id_day
+
         ]);
 
         if(!$schedule){
             $data = [
-                "message"=>"Error al crear estudiante",
+                "message"=>"Error al crear horario",
                 "status"=>500,
                 "data"=>[]
             ];
@@ -90,7 +93,7 @@ class scheduleController extends Controller
         $schedule = Schedule::find($id);
         if (!$schedule) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"horario no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
@@ -98,11 +101,12 @@ class scheduleController extends Controller
         }
         
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'lastname' => 'required',
-            'age' => 'required|integer',
-            'ci' => 'required',
-            'email' => 'required|email',
+
+            "name"=> "",
+            "start_time"=> 'required',
+            "end_time"=> 'required',
+            "id_course"=> 'required',
+            "id_day"=> 'required',
         ]);
 
         if($validator->fails()){
@@ -116,10 +120,10 @@ class scheduleController extends Controller
         };
 
         $schedule->name = $request->name;
-        $schedule->lastname = $request->lastname;
-        $schedule->age = $request->age;
-        $schedule->ci = $request->ci;
-        $schedule->email = $request->email;
+        $schedule->start_time = $request->start_time;
+        $schedule->end_time = $request->end_time;
+        $schedule->id_course = $request->id_course;
+        $schedule->id_day = $request->id_day;
 
         $schedule->save();
 
@@ -137,7 +141,7 @@ class scheduleController extends Controller
         $schedule = Schedule::find($id);
         if (!$schedule) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"horario no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];

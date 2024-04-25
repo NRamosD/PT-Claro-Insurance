@@ -24,7 +24,7 @@ class coursesController extends Controller
         $course = Courses::find($id);
         if (!$course) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"curso no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
@@ -40,11 +40,11 @@ class coursesController extends Controller
 
     public function createCourses(Request $request){
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'lastname' => 'required',
-            'age' => 'required|integer|min:18',
-            'ci' => 'required',
-            'email' => 'required|email|unique:student,email',
+            "name" => 'required',
+            "id_schedule" => 'required',
+            "start_date" => 'required',
+            "end_date" => 'required',
+            "type" => 'required',
         ]);
 
         if($validator->fails()){
@@ -58,16 +58,16 @@ class coursesController extends Controller
         };
 
         $course = Courses::create([
-            'name' =>$request->name,
-            'lastname' =>$request->lastname,
-            'age' =>$request->age,
-            'ci' =>$request->ci,
-            'email' =>$request->email,
+            "name" =>$request->name,
+            "id_schedule" =>$request->id_schedule,
+            "start_date" =>$request->start_date,
+            "end_date" =>$request->end_date,
+            "type" =>$request->type,
         ]);
 
         if(!$course){
             $data = [
-                "message"=>"Error al crear estudiante",
+                "message"=>"Error al crear curso",
                 "status"=>500,
                 "data"=>[]
             ];
@@ -90,19 +90,19 @@ class coursesController extends Controller
         $course = Courses::find($id);
         if (!$course) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"curso no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
             return response()->json($data, 404);
         }
-        
+
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'lastname' => 'required',
-            'age' => 'required|integer',
-            'ci' => 'required',
-            'email' => 'required|email',
+            "name" => 'required',
+            "id_schedule" => 'required',
+            "start_date" => 'required',
+            "end_date" => 'required',
+            "type" => 'required',
         ]);
 
         if($validator->fails()){
@@ -112,14 +112,14 @@ class coursesController extends Controller
                 "data"=>[],
                 "errors"=>$validator->errors(),
             ];
-            return response()->json($data,400);    
+            return response()->json($data,400);
         };
 
         $course->name = $request->name;
-        $course->lastname = $request->lastname;
-        $course->age = $request->age;
-        $course->ci = $request->ci;
-        $course->email = $request->email;
+        $course->id_schedule = $request->id_schedule;
+        $course->start_date = $request->start_date;
+        $course->end_date = $request->end_date;
+        $course->type = $request->type;
 
         $course->save();
 
@@ -137,7 +137,7 @@ class coursesController extends Controller
         $course = Courses::find($id);
         if (!$course) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"curso no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];

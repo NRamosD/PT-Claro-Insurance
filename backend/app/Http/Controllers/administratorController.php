@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Administrator;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class administratorController extends Controller
 {
@@ -24,7 +25,7 @@ class administratorController extends Controller
         $administrator = Administrator::find($id);
         if (!$administrator) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"administrador no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
@@ -40,11 +41,10 @@ class administratorController extends Controller
 
     public function createAdministrator(Request $request){
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'lastname' => 'required',
-            'age' => 'required|integer|min:18',
-            'ci' => 'required',
-            'email' => 'required|email|unique:student,email',
+            "name"=>"required",
+            "lastname"=>"required",
+            "password"=>"required|min:8|regex:/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&]+$/",
+            "email"=>"required"
         ]);
 
         if($validator->fails()){
@@ -57,17 +57,18 @@ class administratorController extends Controller
             return response()->json($data,400);    
         };
 
+        $encryptedPassword = Hash::make($request->password);
+
         $administrator = Administrator::create([
-            'name' =>$request->name,
-            'lastname' =>$request->lastname,
-            'age' =>$request->age,
-            'ci' =>$request->ci,
-            'email' =>$request->email,
+            "name"=>$request->name,
+            "lastname"=>$request->lastname,
+            "password"=>$encryptedPassword,
+            "email"=>$request->email,
         ]);
 
         if(!$administrator){
             $data = [
-                "message"=>"Error al crear estudiante",
+                "message"=>"Error al crear administrador",
                 "status"=>500,
                 "data"=>[]
             ];
@@ -90,7 +91,7 @@ class administratorController extends Controller
         $administrator = Administrator::find($id);
         if (!$administrator) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"administrador no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
@@ -98,11 +99,9 @@ class administratorController extends Controller
         }
         
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'lastname' => 'required',
-            'age' => 'required|integer',
-            'ci' => 'required',
-            'email' => 'required|email',
+            "name"=>"required",
+            "lastname"=>"required",
+            "email"=>"required"
         ]);
 
         if($validator->fails()){
@@ -117,8 +116,6 @@ class administratorController extends Controller
 
         $administrator->name = $request->name;
         $administrator->lastname = $request->lastname;
-        $administrator->age = $request->age;
-        $administrator->ci = $request->ci;
         $administrator->email = $request->email;
 
         $administrator->save();
@@ -137,7 +134,7 @@ class administratorController extends Controller
         $administrator = Administrator::find($id);
         if (!$administrator) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"administrador no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];

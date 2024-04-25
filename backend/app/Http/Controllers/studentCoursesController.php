@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class studentCoursesController extends Controller
 {
-    public function getAllStudentCoursess(){
+    public function getAllStudentCourses(){
 
         $studentCourses = StudentCourses::all();
         $data = [
@@ -24,7 +24,7 @@ class studentCoursesController extends Controller
         $studentCourse = StudentCourses::find($id);
         if (!$studentCourse) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"registro de EstudianteCurso no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
@@ -39,12 +39,11 @@ class studentCoursesController extends Controller
     }
 
     public function createStudentCourses(Request $request){
+
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'lastname' => 'required',
-            'age' => 'required|integer|min:18',
-            'ci' => 'required',
-            'email' => 'required|email|unique:student,email',
+            "description" => "required",
+            "id_course" => "required",
+            "id_student" => "required"
         ]);
 
         if($validator->fails()){
@@ -58,16 +57,14 @@ class studentCoursesController extends Controller
         };
 
         $studentCourse = StudentCourses::create([
-            'name' =>$request->name,
-            'lastname' =>$request->lastname,
-            'age' =>$request->age,
-            'ci' =>$request->ci,
-            'email' =>$request->email,
+            "description" => $request->description,
+            "id_course" => $request->id_course,
+            "id_student" => $request->id_student
         ]);
 
         if(!$studentCourse){
             $data = [
-                "message"=>"Error al crear estudiante",
+                "message"=>"Error al crear registro de EstudianteCurso",
                 "status"=>500,
                 "data"=>[]
             ];
@@ -90,7 +87,7 @@ class studentCoursesController extends Controller
         $studentCourse = StudentCourses::find($id);
         if (!$studentCourse) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"registro de EstudianteCurso no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
@@ -98,11 +95,9 @@ class studentCoursesController extends Controller
         }
         
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'lastname' => 'required',
-            'age' => 'required|integer',
-            'ci' => 'required',
-            'email' => 'required|email',
+            "description" => "",
+            "id_course" => "required",
+            "id_student" => "required"
         ]);
 
         if($validator->fails()){
@@ -115,11 +110,9 @@ class studentCoursesController extends Controller
             return response()->json($data,400);    
         };
 
-        $studentCourse->name = $request->name;
-        $studentCourse->lastname = $request->lastname;
-        $studentCourse->age = $request->age;
-        $studentCourse->ci = $request->ci;
-        $studentCourse->email = $request->email;
+        $studentCourse->description = $request->description;
+        $studentCourse->id_course = $request->id_course;
+        $studentCourse->id_student = $request->id_student;
 
         $studentCourse->save();
 
@@ -137,7 +130,7 @@ class studentCoursesController extends Controller
         $studentCourse = StudentCourses::find($id);
         if (!$studentCourse) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"registro de EstudianteCurso no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];

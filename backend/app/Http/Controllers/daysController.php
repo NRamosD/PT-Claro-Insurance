@@ -24,7 +24,7 @@ class daysController extends Controller
         $day = Days::find($id);
         if (!$day) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"dia no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
@@ -40,11 +40,7 @@ class daysController extends Controller
 
     public function createDays(Request $request){
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'lastname' => 'required',
-            'age' => 'required|integer|min:18',
-            'ci' => 'required',
-            'email' => 'required|email|unique:student,email',
+            'day_name' => 'required'
         ]);
 
         if($validator->fails()){
@@ -58,16 +54,12 @@ class daysController extends Controller
         };
 
         $day = Days::create([
-            'name' =>$request->name,
-            'lastname' =>$request->lastname,
-            'age' =>$request->age,
-            'ci' =>$request->ci,
-            'email' =>$request->email,
+            'day_name' =>$request->day_name
         ]);
 
         if(!$day){
             $data = [
-                "message"=>"Error al crear estudiante",
+                "message"=>"Error al crear dia",
                 "status"=>500,
                 "data"=>[]
             ];
@@ -90,7 +82,7 @@ class daysController extends Controller
         $day = Days::find($id);
         if (!$day) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"dia no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
@@ -98,11 +90,7 @@ class daysController extends Controller
         }
         
         $validator = Validator::make($request->all(),[
-            'name' => 'required',
-            'lastname' => 'required',
-            'age' => 'required|integer',
-            'ci' => 'required',
-            'email' => 'required|email',
+            'day_name' => 'required'
         ]);
 
         if($validator->fails()){
@@ -115,11 +103,7 @@ class daysController extends Controller
             return response()->json($data,400);    
         };
 
-        $day->name = $request->name;
-        $day->lastname = $request->lastname;
-        $day->age = $request->age;
-        $day->ci = $request->ci;
-        $day->email = $request->email;
+        $day->day_name = $request->day_name;
 
         $day->save();
 
@@ -137,7 +121,7 @@ class daysController extends Controller
         $day = Days::find($id);
         if (!$day) {
             $data = [
-                "message"=>"Estudiante no encontrado",
+                "message"=>"dia no encontrado",
                 "status"=>404,
                 "data"=>[]
             ];
