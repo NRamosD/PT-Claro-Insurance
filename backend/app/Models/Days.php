@@ -10,6 +10,7 @@ class Days extends Model
     use HasFactory;
 
     protected $table  = "days";
+    public $timestamps = false;
 
     protected $fillable = [
         "day_name"

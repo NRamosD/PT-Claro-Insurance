@@ -19,7 +19,7 @@ class studentCoursesController extends Controller
         return response()->json($data,200);
     }
 
-    public function getStudentCoursesById($id)
+    public function getStudentCourseById($id)
     {
         $studentCourse = StudentCourses::find($id);
         if (!$studentCourse) {
@@ -38,10 +38,9 @@ class studentCoursesController extends Controller
         return response()->json($data,200);
     }
 
-    public function createStudentCourses(Request $request){
+    public function createStudentCourse(Request $request){
 
         $validator = Validator::make($request->all(),[
-            "description" => "required",
             "id_course" => "required",
             "id_student" => "required"
         ]);
@@ -95,7 +94,6 @@ class studentCoursesController extends Controller
         }
         
         $validator = Validator::make($request->all(),[
-            "description" => "",
             "id_course" => "required",
             "id_student" => "required"
         ]);
@@ -125,7 +123,7 @@ class studentCoursesController extends Controller
         return response()->json($data,200);
     }
 
-    public function deleteStudentCourses($id)
+    public function deleteStudentCourse($id)
     {
         $studentCourse = StudentCourses::find($id);
         if (!$studentCourse) {

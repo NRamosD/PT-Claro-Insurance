@@ -103,10 +103,10 @@ class scheduleController extends Controller
         $validator = Validator::make($request->all(),[
 
             "name"=> "",
-            "start_time"=> 'required',
-            "end_time"=> 'required',
-            "id_course"=> 'required',
-            "id_day"=> 'required',
+            "start_time"=> '',
+            "end_time"=> '',
+            "id_course"=> '',
+            "id_day"=> '',
         ]);
 
         if($validator->fails()){

@@ -19,7 +19,7 @@ class daysController extends Controller
         return response()->json($data,200);
     }
 
-    public function getDaysById($id)
+    public function getDayById($id)
     {
         $day = Days::find($id);
         if (!$day) {
@@ -38,7 +38,7 @@ class daysController extends Controller
         return response()->json($data,200);
     }
 
-    public function createDays(Request $request){
+    public function createDay(Request $request){
         $validator = Validator::make($request->all(),[
             'day_name' => 'required'
         ]);
@@ -77,7 +77,7 @@ class daysController extends Controller
         return response()->json($data,200);
     }
 
-    public function updateDays(Request $request, $id)
+    public function updateDay(Request $request, $id)
     {
         $day = Days::find($id);
         if (!$day) {
@@ -116,7 +116,7 @@ class daysController extends Controller
         return response()->json($data,200);
     }
 
-    public function deleteDays($id)
+    public function deleteDay($id)
     {
         $day = Days::find($id);
         if (!$day) {

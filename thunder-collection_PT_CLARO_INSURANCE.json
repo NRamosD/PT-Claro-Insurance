@@ -1,0 +1,594 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "PT_CLARO_INSURANCE",
+    "collectionId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+    "dateExported": "2024-04-25T20:14:28.282Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "c24f58b2-ffc2-494b-aa12-55f0a6622995",
+            "name": "curso",
+            "containerId": "",
+            "created": "2024-04-25T19:06:08.842Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "cb119309-b37b-4fcc-bc9b-7b70ca5b3169",
+            "name": "estudiante",
+            "containerId": "",
+            "created": "2024-04-25T19:10:43.616Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "0041fc9d-9780-4931-8213-b54ceafe27b5",
+            "name": "days",
+            "containerId": "",
+            "created": "2024-04-25T19:12:32.153Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "2ddc16f5-e466-4740-90be-605d308d8b75",
+            "name": "horarios",
+            "containerId": "",
+            "created": "2024-04-25T19:27:34.663Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "fc06af4a-a7b4-4986-b914-b9f2a97c602e",
+            "name": "student-courses",
+            "containerId": "",
+            "created": "2024-04-25T19:59:24.021Z",
+            "sortNum": 50000
+        },
+        {
+            "_id": "7334e07a-a824-405a-8dad-07e29701e05c",
+            "name": "administrator",
+            "containerId": "",
+            "created": "2024-04-25T20:05:57.142Z",
+            "sortNum": 60000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "7271047d-f73a-4f07-b6a5-6242cc033b7f",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "c24f58b2-ffc2-494b-aa12-55f0a6622995",
+            "name": "ALL",
+            "url": "http://localhost:8000/api/course",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-04-25T19:06:08.844Z",
+            "modified": "2024-04-25T19:49:22.668Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "0f877697-c277-4f20-8bed-759b005068ef",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "cb119309-b37b-4fcc-bc9b-7b70ca5b3169",
+            "name": "ALL",
+            "url": "http://localhost:8000/api/student",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-04-25T19:10:43.616Z",
+            "modified": "2024-04-25T19:11:16.743Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "4e067857-3c53-4485-b34a-c0f89fff5b9d",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "0041fc9d-9780-4931-8213-b54ceafe27b5",
+            "name": "ALL",
+            "url": "http://localhost:8000/api/days",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-04-25T19:12:32.153Z",
+            "modified": "2024-04-25T19:12:49.768Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "377c275a-6b0f-433a-9350-0cdb3b454762",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "2ddc16f5-e466-4740-90be-605d308d8b75",
+            "name": "ALL",
+            "url": "http://localhost:8000/api/schedule",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-04-25T19:27:34.663Z",
+            "modified": "2024-04-25T19:45:52.325Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "b5cb84ab-ca42-4f01-9f8e-35cb2bf1bb2d",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "fc06af4a-a7b4-4986-b914-b9f2a97c602e",
+            "name": "ALL",
+            "url": "http://localhost:8000/api/student_courses",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-04-25T19:59:24.022Z",
+            "modified": "2024-04-25T20:01:59.200Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "fd3be7b5-6684-42ee-818b-baf80e7822d3",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "7334e07a-a824-405a-8dad-07e29701e05c",
+            "name": "ALL",
+            "url": "http://localhost:8000/api/administrator",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-04-25T20:05:57.142Z",
+            "modified": "2024-04-25T20:06:25.400Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "c9935916-c26a-4406-9fbf-aea59ee5739b",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "c24f58b2-ffc2-494b-aa12-55f0a6622995",
+            "name": "BY_ID",
+            "url": "http://localhost:8000/api/course/1",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2024-04-25T19:06:08.844Z",
+            "modified": "2024-04-25T19:07:04.387Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "d0c1e02e-b41d-4c93-b631-bb5f6566a739",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "cb119309-b37b-4fcc-bc9b-7b70ca5b3169",
+            "name": "BY_ID",
+            "url": "http://localhost:8000/api/student/1",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2024-04-25T19:10:43.617Z",
+            "modified": "2024-04-25T19:11:20.095Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "889ccfbb-0a79-4c76-acc7-2f2930b25c8b",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "0041fc9d-9780-4931-8213-b54ceafe27b5",
+            "name": "BY_ID",
+            "url": "http://localhost:8000/api/days/1",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2024-04-25T19:12:32.154Z",
+            "modified": "2024-04-25T19:13:08.411Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "9d571658-0f59-4346-a6af-063d5c4049de",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "2ddc16f5-e466-4740-90be-605d308d8b75",
+            "name": "BY_ID",
+            "url": "http://localhost:8000/api/schedule/1",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2024-04-25T19:27:34.664Z",
+            "modified": "2024-04-25T19:28:09.846Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "0d34b7f5-2f4e-43fc-8f60-7265b3e40b38",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "fc06af4a-a7b4-4986-b914-b9f2a97c602e",
+            "name": "BY_ID",
+            "url": "http://localhost:8000/api/student_courses/1",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2024-04-25T19:59:24.023Z",
+            "modified": "2024-04-25T20:02:03.649Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "abbcc21d-83a5-4145-b207-f0460ba613ad",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "7334e07a-a824-405a-8dad-07e29701e05c",
+            "name": "BY_ID",
+            "url": "http://localhost:8000/api/administrator/1",
+            "method": "GET",
+            "sortNum": 7500,
+            "created": "2024-04-25T20:05:57.143Z",
+            "modified": "2024-04-25T20:06:28.216Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "3066ede4-08d7-419c-a846-a6a081e71d72",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "c24f58b2-ffc2-494b-aa12-55f0a6622995",
+            "name": "POST",
+            "url": "http://localhost:8000/api/course",
+            "method": "POST",
+            "sortNum": 13750,
+            "created": "2024-04-25T19:06:08.844Z",
+            "modified": "2024-04-25T19:48:51.978Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Matemática Avanzada\",\n  \"start_date\":\"2024-04-25\",\n  \"end_date\":\"2024-06-25\",\n  \"type\":\"Virtual\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "4f83fdbf-8a2e-4e1d-8718-5f6e707c7e28",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "cb119309-b37b-4fcc-bc9b-7b70ca5b3169",
+            "name": "POST",
+            "url": "http://localhost:8000/api/student",
+            "method": "POST",
+            "sortNum": 13750,
+            "created": "2024-04-25T19:10:43.618Z",
+            "modified": "2024-04-25T19:13:45.983Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Nixon\",\n  \"lastname\":\"Ramos\",\n  \"age\":18,\n  \"ci\":\"08012383948\",\n  \"email\":\"nixonramos@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "67251a7b-cf52-4606-aa88-cc4fcaf0b660",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "0041fc9d-9780-4931-8213-b54ceafe27b5",
+            "name": "POST",
+            "url": "http://localhost:8000/api/days",
+            "method": "POST",
+            "sortNum": 13750,
+            "created": "2024-04-25T19:12:32.155Z",
+            "modified": "2024-04-25T19:51:42.779Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":1,\n  \"day_name\":\"Domingo\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "ba385791-44e1-4066-96a3-7d9dbe583b43",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "2ddc16f5-e466-4740-90be-605d308d8b75",
+            "name": "POST",
+            "url": "http://localhost:8000/api/schedule",
+            "method": "POST",
+            "sortNum": 13750,
+            "created": "2024-04-25T19:27:34.665Z",
+            "modified": "2024-04-25T19:50:26.271Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Nocturno\",\n  \"start_time\":\"19:00:00\",\n  \"end_time\":\"21:00:00\",\n  \"id_course\":1,\n  \"id_day\":1\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "6947b348-1248-4107-9ec0-5d9e8683e51d",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "fc06af4a-a7b4-4986-b914-b9f2a97c602e",
+            "name": "POST",
+            "url": "http://localhost:8000/api/student_courses",
+            "method": "POST",
+            "sortNum": 13750,
+            "created": "2024-04-25T19:59:24.024Z",
+            "modified": "2024-04-25T20:04:26.856Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"description\":\"\",\n  \"id_course\":1,\n  \"id_student\":1\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c7c19bf9-44aa-4f67-b067-def7a4fa8df5",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "7334e07a-a824-405a-8dad-07e29701e05c",
+            "name": "POST",
+            "url": "http://localhost:8000/api/administrator",
+            "method": "POST",
+            "sortNum": 13750,
+            "created": "2024-04-25T20:05:57.144Z",
+            "modified": "2024-04-25T20:09:56.122Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Nix\",\n  \"lastname\":\"Ramos\",\n  \"password\":\"Gatito$?28\",\n  \"email\":\"nixon@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7672ec9a-a01c-401f-9246-1e9a81a07ec2",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "c24f58b2-ffc2-494b-aa12-55f0a6622995",
+            "name": "PUT",
+            "url": "http://localhost:8000/api/course/1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-25T19:06:08.844Z",
+            "modified": "2024-04-25T19:27:22.143Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"\",\n  \"id_schedule\":1,\n  \"start_date\":\"2024-04-25T19:09:01.701Z\",\n  \"end_date\":\"2024-06-25T19:09:01.701Z\",\n  \"type\":\"Virtual\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8f4819fa-4368-4113-87a3-644c142ad756",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "cb119309-b37b-4fcc-bc9b-7b70ca5b3169",
+            "name": "PUT",
+            "url": "http://localhost:8000/api/student/1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-25T19:10:43.619Z",
+            "modified": "2024-04-25T19:26:58.759Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Nixon\",\n  \"lastname\":\"Ramos\",\n  \"age\":18,\n  \"ci\":\"08012383948\",\n  \"email\":\"nixonramos@gmail.com\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "a02fcaad-b447-4ea6-95a4-58ce9d09d981",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "0041fc9d-9780-4931-8213-b54ceafe27b5",
+            "name": "PUT",
+            "url": "http://localhost:8000/api/days/1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-25T19:12:32.156Z",
+            "modified": "2024-04-25T19:54:29.771Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"day_name\":\"Domingo\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "27545c6d-e358-48e4-8506-28cc28d214b2",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "2ddc16f5-e466-4740-90be-605d308d8b75",
+            "name": "PUT",
+            "url": "http://localhost:8000/api/schedule/1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-25T19:27:34.666Z",
+            "modified": "2024-04-25T19:57:49.892Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n      \"id\": 1,\n      \"name\": \"Nocturno\",\n      \"start_time\": \"19:00:00\",\n      \"end_time\": \"21:00:00\",\n      \"id_course\": 1,\n      \"id_day\": 2,\n      \"created_at\": \"2024-04-25T19:50:26.000000Z\",\n      \"updated_at\": \"2024-04-25T19:50:26.000000Z\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "9bf902bd-f945-4867-9c5c-b3331abe7dac",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "fc06af4a-a7b4-4986-b914-b9f2a97c602e",
+            "name": "PUT",
+            "url": "http://localhost:8000/api/student_courses/1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-25T19:59:24.025Z",
+            "modified": "2024-04-25T20:02:13.108Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n      \"id\": 1,\n      \"name\": \"Nocturno\",\n      \"start_time\": \"19:00:00\",\n      \"end_time\": \"21:00:00\",\n      \"id_course\": 1,\n      \"id_day\": 2,\n      \"created_at\": \"2024-04-25T19:50:26.000000Z\",\n      \"updated_at\": \"2024-04-25T19:50:26.000000Z\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "351ba651-120d-431f-8380-9c02fea908c5",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "7334e07a-a824-405a-8dad-07e29701e05c",
+            "name": "PUT",
+            "url": "http://localhost:8000/api/administrator/1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2024-04-25T20:05:57.145Z",
+            "modified": "2024-04-25T20:06:33.569Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n      \"id\": 1,\n      \"name\": \"Nocturno\",\n      \"start_time\": \"19:00:00\",\n      \"end_time\": \"21:00:00\",\n      \"id_course\": 1,\n      \"id_day\": 2,\n      \"created_at\": \"2024-04-25T19:50:26.000000Z\",\n      \"updated_at\": \"2024-04-25T19:50:26.000000Z\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "d81bb684-d279-4af7-9fbc-51bb5a47048a",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "c24f58b2-ffc2-494b-aa12-55f0a6622995",
+            "name": "DELETE",
+            "url": "http://localhost:8000/api/course/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-25T19:06:08.844Z",
+            "modified": "2024-04-25T19:27:17.307Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "433fe518-d39e-47ac-b25d-a41d3b218baa",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "cb119309-b37b-4fcc-bc9b-7b70ca5b3169",
+            "name": "DELETE",
+            "url": "http://localhost:8000/api/student/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-25T19:10:43.620Z",
+            "modified": "2024-04-25T19:26:54.864Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "7d3a6b56-0dd7-4a00-a57d-6dbc0b6ec190",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "0041fc9d-9780-4931-8213-b54ceafe27b5",
+            "name": "DELETE",
+            "url": "http://localhost:8000/api/days/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-25T19:12:32.157Z",
+            "modified": "2024-04-25T19:51:01.075Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "ad70d79a-03ab-48eb-9549-6d04753b2281",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "2ddc16f5-e466-4740-90be-605d308d8b75",
+            "name": "DELETE",
+            "url": "http://localhost:8000/api/schedule/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-25T19:27:34.667Z",
+            "modified": "2024-04-25T19:50:51.981Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "075b4dc5-8e43-4afd-8695-599a05272c79",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "fc06af4a-a7b4-4986-b914-b9f2a97c602e",
+            "name": "DELETE",
+            "url": "http://localhost:8000/api/student_courses/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-25T19:59:24.026Z",
+            "modified": "2024-04-25T20:02:16.552Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        },
+        {
+            "_id": "dc8d6c8b-5890-4914-b364-fe30f9600889",
+            "colId": "2edbb480-3a67-4fbd-9682-4e43387b03ae",
+            "containerId": "7334e07a-a824-405a-8dad-07e29701e05c",
+            "name": "DELETE",
+            "url": "http://localhost:8000/api/administrator/1",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-04-25T20:05:57.146Z",
+            "modified": "2024-04-25T20:06:36.682Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ]
+        }
+    ],
+    "ref": "7h1TYwrThvNJ1xFDBS6iwbZNwBfx6MqKVq6F7gzo5qmvhJ3EkBgMnbfzFQ_MYtHi2WGFqkwrCQgBhBNBU7fhTA"
+}

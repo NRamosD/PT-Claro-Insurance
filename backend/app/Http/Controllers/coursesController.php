@@ -19,7 +19,7 @@ class coursesController extends Controller
         return response()->json($data,200);
     }
 
-    public function getCoursesById($id)
+    public function getCourseById($id)
     {
         $course = Courses::find($id);
         if (!$course) {
@@ -38,10 +38,9 @@ class coursesController extends Controller
         return response()->json($data,200);
     }
 
-    public function createCourses(Request $request){
+    public function createCourse(Request $request){
         $validator = Validator::make($request->all(),[
             "name" => 'required',
-            "id_schedule" => 'required',
             "start_date" => 'required',
             "end_date" => 'required',
             "type" => 'required',
@@ -59,7 +58,6 @@ class coursesController extends Controller
 
         $course = Courses::create([
             "name" =>$request->name,
-            "id_schedule" =>$request->id_schedule,
             "start_date" =>$request->start_date,
             "end_date" =>$request->end_date,
             "type" =>$request->type,
@@ -85,7 +83,7 @@ class coursesController extends Controller
         return response()->json($data,200);
     }
 
-    public function updateCourses(Request $request, $id)
+    public function updateCourse(Request $request, $id)
     {
         $course = Courses::find($id);
         if (!$course) {
@@ -99,7 +97,6 @@ class coursesController extends Controller
 
         $validator = Validator::make($request->all(),[
             "name" => 'required',
-            "id_schedule" => 'required',
             "start_date" => 'required',
             "end_date" => 'required',
             "type" => 'required',
@@ -116,7 +113,6 @@ class coursesController extends Controller
         };
 
         $course->name = $request->name;
-        $course->id_schedule = $request->id_schedule;
         $course->start_date = $request->start_date;
         $course->end_date = $request->end_date;
         $course->type = $request->type;
@@ -132,7 +128,7 @@ class coursesController extends Controller
         return response()->json($data,200);
     }
 
-    public function deleteCourses($id)
+    public function deleteCourse($id)
     {
         $course = Courses::find($id);
         if (!$course) {
